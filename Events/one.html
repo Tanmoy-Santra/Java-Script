@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <ul id="images">
+        <li><img height="40px" src="https://i.pinimg.com/474x/49/4d/2e/494d2e25fad7412b4f11beb7242ba804.jpg" id="oggy" alt="oggy" onclick="alert('oggy')"></li>
+        <li><img  height="40px" src="https://w7.pngwing.com/pngs/343/737/png-transparent-ben-10-illustration-ben-10-cartoon-1080p-ben-10-miscellaneous-game-hand.png" id="ben10" alt="ben10"></li>
+        <li><img height="40px" src="https://cdn.staticneo.com/w/naruto/Nprofile2.jpg" id="naruto" alt="naruto"></li>
+        <li><img height="40px" src="https://i.pinimg.com/736x/aa/2e/f0/aa2ef0ac37db19de28da92aa1b297ca6.jpg" id="tom" alt="tom"></li>
+        <li><img height="40px" src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-212710,resizemode-75,msid-75201793/magazines/panache/playtime-on-tv-pogo-prasar-bharati-join-hands-to-air-chhota-bheem-on-dd-national.jpg" id="bheem" alt="bheem"></li>
+        <li><a style="color:aliceblue ;" href="https://google.com" id="google">Google</a></li>
+    </ul>
+</body>
+<script>
+    document.getElementById('ben10').onclick = function(){
+        alert('ben10')
+    }
+    document.getElementById('tom').addEventListener('click',function(){
+        alert("tom")//best approash
+    },false)
+    document.getElementById('naruto').addEventListener('click',function(e){
+        alert("naruto")//best approash
+        console.log(e);
+
+    })
+    //type=>keyboard,mouse, timetamp=>time,defaultPrevented=>from related , target , toElement , currentTarget ,
+    //clientX,clientY,screenX,screenY , altkey , ctrlkey , shiftkey , keyCode
+
+    //event propogation -- 1 event bubling 2.event capturing
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("click inside the ul");
+    // },false)
+    // document.getElementById('bheem').addEventListener('click',function(e){
+    //     console.log("click inside the bheem");
+       // e.stopPropagation()//prevent to propogate the bubling and captureing
+    //},false)
+    //if true captureing , if false or default bubling
+    
+    //preventDefault
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault()
+    //     console.log("google clicked");
+    // },false)
+
+//work -2
+//click the image and image is vanish
+document.querySelector('#images').addEventListener('click',function(e){
+    console.log(e.target);
+    console.log(e.target.parentNode);
+    let removeIt=e.target.parentNode
+    removeIt.remove()
+})
+</script>
+</html>

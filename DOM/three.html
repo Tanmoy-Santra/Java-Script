@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .bg-black{
+            color: white;
+            background-color: black;
+        }
+    </style>
+    <title>Dom3</title>
+</head>
+<body class="bg-black">
+    <h1>chai aur code</h1>
+
+</body>
+<script>
+  const div=  document.createElement('div')
+  console.log(div);
+  div.className="main"
+  div.id=Math.random()*10
+  div.setAttribute("title","genereted title")
+  div.style.backgroundColor="green"
+//   div.innerText="chai aur code"
+
+//*************add the element to the body of html code****************************
+const addText=document.createTextNode("chai or code");
+div.appendChild(addText)
+document.body.appendChild(div)
+
+</script>
+</html>

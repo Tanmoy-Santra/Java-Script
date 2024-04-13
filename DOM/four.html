@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom4</title>
+    <style>
+        .bg-black{
+            background-color: black;
+            color:white ;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <ul class="language">
+        <li>javascript</li>
+        <li>java</li>
+    </ul>    
+</body>
+<script>
+    function addLang(language){
+        const li=document.createElement("li")
+        li.innerHTML=`${language}`
+        document.querySelector(".language").appendChild(li)           
+    }
+    addLang("python")
+    addLang("TypeScript")
+
+    function addOptimizeWay(language){
+       const li= document.createElement("li")
+       li.appendChild(document.createTextNode(language))
+       document.querySelector(".language").appendChild(li)
+    }
+    addOptimizeWay("GoLang")
+
+    //remove edit
+
+    const secondlang=document.querySelector("li:nth-child(2)")
+    //secondlang.innerHTML="mojo"
+    const newLi=document.createElement("li")
+    newLi.textContent="Mojo"
+    secondlang.replaceWith(newLi)
+   
+</script>
+</html>

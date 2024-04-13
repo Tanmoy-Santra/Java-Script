@@ -1,0 +1,36 @@
+body{
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.game-container{
+    margin: auto;
+}
+.margine{
+    margin-top: 15px;
+}
+button{
+    border: none;
+    outline: none;
+    width: 70px;
+    height: 40px;
+    background-color: orange;
+    color: white;
+    font-size: 15px;
+    border-radius: 10px;
+}
+button:hover{
+    background-color: orangered;
+}
+input{
+    margin: 20px;
+    height: 30px;
+    width: 300px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 25px;
+}

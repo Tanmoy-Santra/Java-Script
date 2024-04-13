@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <style>
+        .bg-black{
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div class="parent">
+        <div class="day">monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+    <script>
+        const parent=document.querySelector(".parent")
+        console.log(parent)
+        console.log(parent.children[1].innerHTML)
+        for(let i=0; i<parent.children.length; i++) {
+          console.log(parent.children[i].innerHTML);
+        }//print the all elements
+
+        parent.children[1].style.color="orange"//change the color of 1th child
+
+        console.log(parent.firstElementChild);
+        console.log(parent.lastElementChild);
+
+        const day1=document.querySelector('.day')
+        console.log(day1);
+        console.log(day1.parentElement);
+        console.log(day1.nextElementSibling);
+
+        console.log("nodes :",parent.childNodes);
+
+
+        
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+body{
+    background-color: black;
+    margin: 0;    
+    padding: 0;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin: auto;
+    align-items: center;
+}
+.clock-body{
+    height: 60px;
+    width: 200px;
+    background-color: azure;
+    color:aqua;
+    font-size: 30px;
+    font-weight: bolder;
+    margin: auto;
+    border-radius: 10px;
+    
+}
+
+#clock-time{
+    padding: 10px;
+    color: blue
+}

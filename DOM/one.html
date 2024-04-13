@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom learning</title>
+    <script src="one.js"></script>
+    <style>
+        .bg-black{
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1 id="title">DOM on chai sur code</h1>
+        <h2 class="h2-tag">Lorem, ipsum dolor.</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea.</p>
+        <img class="image" src="https://pbs.twimg.com/media/B-oradAW0AIy-IV?format=jpg&name=small"></img>
+        <input type="text" name="" id="">
+        <div class="demo">ok</div>
+        <div class="write"></div>
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+        </ul>
+    </div>    
+    <script>
+        //querySelecter
+        console.log(document.querySelector('#title').innerHTML)
+        //getElementById
+        console.log(document.getElementById('title').innerHTML);
+        //gtElementByClass
+        var elements = document.getElementsByClassName('h2-tag');
+        var innerHTML = elements[0].innerHTML;
+        console.log(innerHTML);
+
+       //select the ul/li
+
+       const myUl=document.querySelector('ul')
+       console.log(myUl.querySelector('li'));
+
+       //get element by tag name
+
+       console.log(document.getElementsByTagName("h1")[0].innerHTML)
+
+       //change the inner text
+
+      document.getElementsByTagName("h1")[0].innerText="ok i am change"
+      console.log(document.getElementsByTagName("h1")[0].innerText);
+
+      //change the image
+
+      document.getElementsByClassName("image").innerHTML="src='https://toppr-question-images.s3.ap-southeast-1.amazonaws.com/question_images/903014_430218ac805d46b489dc685f3f5e9a8d.png'"
+      //document.getElementsByClassName("image").src = "";
+
+      console.log(document.getElementsByClassName("image").innerHTML);     
+
+      //date
+
+      console.log(document.getElementsByClassName("demo").innerHTML = "Date : " + Date()); 
+
+      //Dom CSS
+      
+      var h2Element = document.querySelector("h2");
+        if (h2Element) {
+            h2Element.style.color = "blue";
+        } else {
+            console.error("No <h2> element found in the document.");
+        }
+
+
+
+      //document.createElement
+
+            // Create a new <div> element
+        var newDiv = document.createElement("div");
+
+        // Add some text content to the div
+        newDiv.textContent = "This is a new div element.";
+
+        // Add the div to the document body
+        document.body.appendChild(newDiv);
+
+
+      //document remove element
+
+      // Assuming we have an element with the ID "myElement" that we want to remove
+        var elementToRemove = document.getElementById("myElement");
+
+        // Remove the element from its parent
+        if (elementToRemove && elementToRemove.parentNode) {
+            elementToRemove.parentNode.removeChild(elementToRemove);
+        }
+
+        //replacr child 
+
+                    // Assuming we have an existing parent element with the ID "parentElement"
+            var parentElement = document.getElementById("parentElement");
+
+            // Create a new <span> element
+            var newSpan = document.createElement("span");
+            newSpan.textContent = "This is a new span.";
+
+            // Assuming we have an existing <div> child element with the ID "oldElement"
+            var oldElement = document.getElementById("oldElement");
+
+            // Replace the old element with the new one
+            if (parentElement && oldElement && oldElement.parentNode) {
+                parentElement.replaceChild(newSpan, oldElement);
+            }
+
+
+      
+      
+      
+
+
+
+    </script>
+</body>
+</html>
+<!-- document object model -->
+
+<!-- 
+    title.innerHTML'DOM on chai sur code'
+title.innerText
+'DOM on chai sur code'
+title.textContent
+'DOM on chai sur code'
+document.getElementById('title')
+<h1 id=​"title">​DOM on chai sur code​</h1>​
+title.style.background='green'
+'green'
+document.querySelector("h1")
+<h1 id=​"title" style=​"background:​ green;​">​DOM on chai sur code​</h1>​
+document.quarySelector("h2")
+VM2797:1 Uncaught TypeError: document.quarySelector is not a function
+    at <anonymous>:1:10
+(anonymous) @ VM2797:1
+document.querySelector("h2")
+<h2>​Lorem, ipsum dolor.​</h2>​ 
+
+document.querySelector("input[type='text']")
+<input type=​"text" name id fdprocessedid=​"190nkm">​
+document.querySelector('first-child')
+null
+document.querySelector('ul')
+null
+document.querySelector('ul')
+<ul>​…​</ul>​<li>​…​</li>​::marker​"one"</li>​<li>​…​</li>​::marker​"two"</li>​<li>​…​</li>​::marker​"three"</li>​</ul>​
+const myunorderlist=document.querySelector('ul')
+undefined
+myunorderlist.querySelector('li')
+<li>​::marker​"one"</li>​
+const turnGreen=my
+VM4328:1 Uncaught ReferenceError: my is not defined
+    at <anonymous>:1:17
+(anonymous) @ VM4328:1
+const turnGreen=myunorderlist('li')
+VM4369:1 Uncaught TypeError: myunorderlist is not a function
+    at <anonymous>:1:17
+(anonymous) @ VM4369:1
+const turnGreen=myunorderlist.querySelector('li')
+undefined
+turnGreen.style.background="green"
+'green'
+turnGreen.style.padding="10px"
+'10px'
+turnGreen.innerText="ten"
+'ten'
+
+
+document.querySelectorAll('li')
+NodeList(3) [li, li, li]
+const tempLi=document.querySelectorAll('li')
+undefined
+tempLi
+NodeList(3) [li, li, li]0: liaccessKey: ""ariaAtomic: 
+tempLi.forEach(function(i){})
+undefined
+tempLi.forEach(function(i){
+    i.style.background='green'
+})
+undefined
+
+
+
+
+const classList = document.getElementsByClassName("list-item")
+undefined
+classList
+HTMLCollection(3) [li.list-item, li.list-item, li.list-item]
+classList.forEach(function(i){
+    console.log(i)
+})
+    
+VM7138:1 Uncaught TypeError: classList.forEach is not a function
+    at <anonymous>:1:11
+(anonymous) @ VM7138:1
+Array.from(classList)
+(3) [li.list-item, li.list-item, li.list-item]0: li.list-item1: li.list-item2: li.list-itemlength: 3[[Prototype]]: Array(0)
+const myConvertedArray=Array.from(classList)
+undefined
+myConvertedArray.forEach(function(i){
+    i.style.color="blue"
+})
+
+undefined
+-->

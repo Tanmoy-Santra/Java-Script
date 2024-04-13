@@ -1,0 +1,23 @@
+javaScript -> is a synchonous language , single threaded
+Synchronous = happens at the same time. Asynchronous = doesn't happen at the same time.
+
+Here is a simple explanation of asynchronous and synchronous in JavaScript:
+-------------------------------------------------
+1.Synchronous code means that the code is executed in order, one line at a time. The next line of code will not be executed until the previous line has finished executing.
+
+2.Asynchronous code means that the code is not executed in order. The next line of code can be executed before the previous line has finished executing
+
+
+execution context
+-----------------
+execute one line of code at a time
+
+
+blocking and non-bloking code
+-----------------------------
+blocking code : block the flow of program . read fil synchonous
+
+non-blocking code : does not block execution . read file asynchronous
+
+
+
