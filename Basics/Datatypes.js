@@ -33,3 +33,11 @@ n=null
 console.log('n type l1 type:',typeof(null),typeof(l1));//null is an object ***
 let o
 console.log("o type ",typeof(o));
+
+/*
+var--change any where , print the current one (value)
+
+let--not change within a same scope , does not access out side the scope .
+
+const--constant in any scope. does not change the value any where .
+*/
