@@ -1,4 +1,4 @@
-//for of--array  specific loop
+//for of loop--array  specific loop
 
 const arr=[1,2,3,4,5]
 
