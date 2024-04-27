@@ -9,15 +9,18 @@ console.log(maevel_heros);
 //concat
 newArr=maevel_heros.concat(dc)
 console.log(newArr);
+//['thor', 'Ironman', 'spiderman', 'superman', 'flash', 'Ironman']
+
 
 //spread
 const all_new_heros=[...maevel_heros,...dc]
 console.log(all_new_heros);
+//['thor', 'Ironman', 'spiderman', 'superman', 'flash', 'Ironman']
 
 //flat
 const another_arr=[1,2,3,[4,5,6],7,[6,7,[4,5]]]
 const real_another_array=another_arr.flat(Infinity)
-console.log(real_another_array);
+console.log(real_another_array);// [1, 2, 3, 4, 5, 6, 7, 6, 7, 4, 5]
 
 //from--make any string in to array
 console.log(Array.isArray("Tanmoy"));
