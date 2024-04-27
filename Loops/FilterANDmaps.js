@@ -123,6 +123,23 @@ const numbers1=[1,2,3]
 // 6
 
 
+const array1 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue,
+);
+
+console.log(sumWithInitial);
+// Expected output: 10
+
+//reduce(callbackFn)
+//reduce(callbackFn, initialValue)
+
+
+
 const myTotal =numbers1.reduce((acc,curr)=>acc+curr,0)
 console.log(myTotal);
                    
