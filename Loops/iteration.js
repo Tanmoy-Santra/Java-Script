@@ -23,7 +23,7 @@ for (let index = 0; index < array.length; index++) {
 for (let index = 1; index <=20; index++) {
    if(index==5){
        console.log(index);    
-       break       
+       break       //break from the  loop
    }
    console.log(index)
 }
@@ -31,7 +31,7 @@ for (let index = 1; index <=20; index++) {
 for (let index = 1; index <=20; index++) {
     if(index==5){
         console.log(index);    
-        continue      
+        continue      //means the next line of code will not be execuet
     }
     console.log(index)
  }

@@ -1,8 +1,10 @@
 // let myDate=new Date
-// console.log(myDate);
-// console.log(myDate.toDateString());
-// console.log(myDate.toString());
-// console.log(myDate.toLocaleString());
+// console.log(myDate);Fri Apr 26 2024 20:43:48 GMT+0530 (India Standard Time)
+// console.log(myDate.toDateString());Fri Apr 26 2024
+// console.log(myDate.toString());Fri Apr 26 2024 20:43:48 GMT+0530 (India Standard Time)
+
+// console.log(myDate.toLocaleString());4/26/2024, 8:43:48 PM
+
 // console.log(typeof myDate);//date is a object
 
 /*1.2024-03-26T14:48:25.971Z
