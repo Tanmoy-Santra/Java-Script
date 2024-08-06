@@ -1,5 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- 
+
+    event bubling
+    =============
+    Event bubbling is a concept in JavaScript where when an event occurs on a DOM element, it first triggers
+    the event on that specific element, then it bubbles up through its ancestors in the DOM tree until it 
+    reaches the root of the document. This means that if an event handler is attached to multiple elements nested within each other, 
+    the event will trigger on each of those elements in sequence, from the innermost element to the outermost.
+
+    In this example, when you click the button, you'll see three log messages in the console:
+
+"Button clicked"
+"Inner div clicked"
+"Outer div clicked"
+Even though you only directly clicked the button, all three event handlers were triggered due to event bubbling.
+    The event first triggered on the button, then bubbled up to its parent div (#inner), and finally to the outer div '
+    (#outer). Each element's click event handler was executed in sequence according to the bubbling order.
+    
+    
+    -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
