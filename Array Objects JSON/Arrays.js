@@ -49,6 +49,7 @@ console.log(myArr);
 console.log(newArr);
 console.log(typeof newArr);//format change into string type
 
+
 //slice ,splice
 console.log("A ",myArr);
 const myn1=myArr.slice(1,3)//include 1 to n-1 means 2nd value in to myn1 (2) [2, 3.87]
