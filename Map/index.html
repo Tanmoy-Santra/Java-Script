@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="myclass">
+        <ul class="list">
+            <!-- List items will be added here -->
+        </ul>
+    </div>
+
+    <script>
+        const names = ["whale", "squid", "turtle", "coral", "starfish"];
+        const ul = document.querySelector('.list');
+
+        names.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            ul.appendChild(li);
+        });
+    </script>
+</body>
+</html>
