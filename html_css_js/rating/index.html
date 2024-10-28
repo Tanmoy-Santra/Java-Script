@@ -1,0 +1,29 @@
+<html>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <body>
+        <div class="containr">
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+        </div>
+    </body>
+    <style>
+        .checked{
+            color: yellow;
+        }
+    </style>
+    <script>
+        s=document.getElementsByTagName("span");
+        for(let i=0;i<s.length;i++){
+            s[i].onclick=function(){
+                for(let j=0;j<=i;j++){
+                    s[j].classList.add("checked");
+                }
+            }
+        }
+    </script>
+
+</html>

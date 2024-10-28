@@ -1,0 +1,54 @@
+<html>
+    <body>
+        <div class="container">
+            <div class="box">
+            </div>
+            <div class="buttons">
+                <button class="red-button">red</button>
+                <button class="blue-button">blue</button>
+                <button class="green-button">green</button>
+            </div>
+        </div>
+    </body>
+    <style>
+        .container{            
+            margin: 10px;
+        }
+        .box{
+            margin: 20px;
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        button{
+            height: auto;
+            width: auto;            
+        }
+        .red-button{
+            background: red;
+        }
+        .blue-button{
+            background: blue;
+        }
+        .green-button{
+            background: green;
+        }
+    </style>
+    <script>
+        red_button=document.getElementsByClassName("red-button")[0];
+        box=document.getElementsByClassName("box")[0];
+        red_button.onclick=function(){
+            box.style.backgroundColor="red";
+        }
+        blue_button=document.getElementsByClassName("blue-button")[0];
+        
+        blue_button.onclick=function(){
+            box.style.backgroundColor="blue";
+        }
+        green_button=document.getElementsByClassName("green-button")[0];
+        
+        green_button.onclick=function(){
+            box.style.backgroundColor="green";
+        }
+    </script>
+</html>

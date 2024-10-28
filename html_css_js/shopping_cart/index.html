@@ -1,0 +1,43 @@
+<html>
+    <body>
+        <div class="container">
+            <div id="items">
+                <div id="item1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9eAqxljTteybiscbJymwvzUIgJKvl-zF6bw&s" alt="">
+                    <button class="cart">add to cart</button>
+                </div>
+                <div id="item2">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9eAqxljTteybiscbJymwvzUIgJKvl-zF6bw&s" alt="">
+                    <button class="cart">add to cart</button>
+                </div>
+                <div id="item3">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9eAqxljTteybiscbJymwvzUIgJKvl-zF6bw&s" alt="">
+                    <button class="cart">add to cart</button>
+                </div>
+                <div id="item4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9eAqxljTteybiscbJymwvzUIgJKvl-zF6bw&s" alt="">
+                    <button class="cart">add to cart</button>
+                </div>
+            </div>      
+            <div id="cart_count">0</div>      
+        </div>
+    </body>
+    <style>
+        #items{
+            display: flex;
+        }
+    </style>
+    <script>
+        var cart_count = document.getElementById("cart_count");
+        var cart_btns = document.getElementsByClassName("cart");
+        var cart_item = 0;
+
+        // Loop through all cart buttons and add event listeners
+        for (var i = 0; i < cart_btns.length; i++) {
+            cart_btns[i].addEventListener("click", function() {
+                cart_item = cart_item + 1; // Increment cart count
+                cart_count.innerText = cart_item; // Update cart count display
+            });
+        }
+    </script>
+</html>

@@ -1,0 +1,40 @@
+<html>
+    <body>
+        <div class="container">
+            <span id="counter">0</span>
+            <button id="start">start</button>
+            <button id="stop1">stop</button>
+            <button id="reset">reset</button>
+        </div>
+    </body>
+    <script>
+        start=document.getElementById("start");
+        stop1=document.getElementById("stop1");
+        reset=document.getElementById("reset");
+        counter=document.getElementById("counter");
+        let interval;
+        key=false
+        val=parseInt(counter.innerText);
+        start.onclick=function fo(){
+            while(!key){
+                key=true;
+                interval=setInterval(set_val,1000);
+            }
+        }
+        function set_val(){
+            val=val+1;
+            counter.innerText=val;
+        }
+
+        stop1.onclick=function fo1(){
+            clearInterval(interval);
+            key=false;
+        }
+        reset.onclick=function fo2(){
+            key=false;
+            val=0
+            counter.innerText=0;
+        }
+
+    </script>
+</html>

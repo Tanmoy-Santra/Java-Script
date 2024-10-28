@@ -1,0 +1,33 @@
+<html>
+    <body>
+        <div class="conatiner">
+            <button id="plus" onclick=increae()>+</button>
+            <span id="counter">0</span>
+            <button id="min" onclick=decrease()>-</button>
+        </div>
+    </body>
+    <style>
+        button{
+            background-color: rgb(134, 136, 138);
+        }
+    </style>
+    <script>
+        counter=document.getElementById("counter");
+        count_val=parseInt(counter.innerText);
+            
+        function increae(){
+
+            plus=document.getElementById("plus");
+            count_val=count_val+1;
+            counter.innerText=count_val;
+        }
+        function decrease(){
+
+            min=document.getElementById("min");            
+            count_val=count_val-1;
+            counter.innerText=count_val;
+            
+        }
+
+    </script>
+</html>

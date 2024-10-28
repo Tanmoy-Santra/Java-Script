@@ -1,0 +1,49 @@
+<html>
+    <body>
+        <div class="image">            
+                <div class="animal-image">
+                    <img   id="tiger-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9omvbz9qv0O1SuUBuFYDIYkki4WYL0oihMg&s">
+                    <p>Tiger</p>
+                </div>
+                <div class="animal-image" >
+                    <img id="lion-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/020_The_lion_king_Snyggve_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg/1200px-020_The_lion_king_Snyggve_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg">
+                    <p>Lion</p>
+                </div>                           
+        </div>
+    </body>
+    <style>
+         
+        img{
+            width: 100px;
+            height: 100px;
+        }
+        .image{
+            display: flex;
+            column-gap: 20px;           
+        }
+        .border-geen{
+            border:2px solid green;
+        }
+        
+    </style>
+    <script>
+        tiger_image=document.getElementById("tiger-image");
+        lion_image=document.getElementById("lion-image");
+
+        // tiger_image.onclick=function(){
+        //     tiger_image.style.border="1px solid green"
+        // }
+        // lion_image.onclick=function(){
+        // lion_image.style.border="1px solid green"
+        // }
+
+
+        tiger_image.onclick=function(){
+            tiger_image.classList.add("border-geen");
+        }
+        lion_image.onclick=function(){
+             lion_image.classList.add("border-geen");
+        }
+
+    </script>
+</html>

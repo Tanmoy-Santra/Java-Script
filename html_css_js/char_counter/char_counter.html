@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <div class="container">
+            <input type="text" id="text">
+            <span id="count">0</span>
+        </div>
+    </body>
+    <script>
+        text=document.querySelector("#text");
+        count=document.querySelector("#count");
+        
+        text.addEventListener("input",function(){
+            input_text=text.value;
+            count.innerText=input_text.length;
+        })
+    </script>
+</html>

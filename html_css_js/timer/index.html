@@ -1,0 +1,57 @@
+<html>
+    <body>
+        <div class="container">
+            <span id="hour">0</span> :
+            <span id="min">0</span> :
+            <span id="sec">0</span>
+            <button id="start" onclick="start_clock()">Start</button>
+            <button id="stop" onclick="stop_clock()">Stop</button>
+        </div>
+    </body>
+    <style>
+        .container {
+            font-size: 24px;
+        }
+        button {
+            margin: 5px;
+        }
+    </style>
+    <script>
+        // Get DOM elements
+        const hour = document.getElementById("hour");
+        const min = document.getElementById("min");
+        const sec = document.getElementById("sec");
+
+        let hv = 0, mv = 0, sv = 0;
+        let key = false; // Control variable for starting/stopping the clock
+        let interval; // Variable to hold the setInterval reference
+
+        function start_clock() {
+            if (!key) { // Start only if not already running
+                key = true;
+                interval = setInterval(update_time, 1000); // Update time every second
+            }
+        }
+
+        function stop_clock() {
+            key = false;
+            clearInterval(interval); // Stop the interval
+        }
+
+        function update_time() {
+            sv++; // Increment seconds
+            if (sv >= 60) { // Check if seconds reach 60
+                sv = 0; // Reset seconds
+                mv++; // Increment minutes
+                if (mv >= 60) { // Check if minutes reach 60
+                    mv = 0; // Reset minutes
+                    hv++; // Increment hours
+                }
+            }
+            // Update the displayed values
+            sec.innerText = sv;
+            min.innerText = mv;
+            hour.innerText = hv;
+        }
+    </script>
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <div class="container">
+            <img id="img1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/020_The_lion_king_Snyggve_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg/1200px-020_The_lion_king_Snyggve_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg">
+            <img id="img1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9omvbz9qv0O1SuUBuFYDIYkki4WYL0oihMg&s">
+            <button id="submit" onclick=change_img()>submit</button>
+        </div>
+    </body>
+    <style>
+        .submit{
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function change_img(){
+
+            img1=document.getElementById("img1");
+            img2=document.getElementById("img2");
+
+            img1.style.width="150px";
+            img2.style.width="150px";
+            img1.style.height="150px"
+            img2.style.height="150px"
+
+        }
+    </script>
+</html>

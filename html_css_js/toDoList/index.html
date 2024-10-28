@@ -1,0 +1,46 @@
+<html>
+    <body>
+        <h1>To-Do List</h1>
+        <div class="container">
+            <input type="text" id="content" placeholder="Enter task">
+            <button class="submit" onclick="add()">Add</button>
+            <div id="out"></div>
+        </div>
+
+        <script>
+            // Initialize the list outside the function to keep it persistent
+            var l = [];
+
+            // Function to empty the input field
+            function emptyInput() {
+                document.getElementById("content").value = "";
+            }
+
+            // Function to add the task to the list
+            function add() {
+                var content = document.getElementById("content").value;
+
+                if (content) { // Only add if input is not empty
+                    l.push(content); // Use push to add the content to the array
+                    console.log(content);
+
+                    updateList(); // Update the displayed list
+                    emptyInput(); // Clear the input field
+                }
+            }
+
+            // Function to update the displayed to-do list
+            function updateList() {
+                var output = document.getElementById("out");
+                output.innerHTML = ""; // Clear previous content
+
+                // Create a list item for each task
+                for (var i = 0; i < l.length; i++) {
+                    var item = document.createElement("p");
+                    item.innerText = l[i]; // Set the text of the list item
+                    output.appendChild(item); // Add the item to the output div
+                }
+            }
+        </script>
+    </body>
+</html>

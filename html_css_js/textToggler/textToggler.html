@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <div class="containr">
+            <p id="text">
+                Hello world !
+            </p>
+            <button id="toggle" onclick=text_toggle()>toggle</button>
+        </div>
+    </body>
+    <script>
+        new_text="Good bye world!"
+        text=document.getElementById("text");
+        function text_toggle(){
+            text.innerText=new_text;
+        }
+    </script>
+</html>

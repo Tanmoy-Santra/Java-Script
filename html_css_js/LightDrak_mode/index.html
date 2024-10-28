@@ -1,0 +1,56 @@
+<html>
+    <body>
+        <div class="container">
+            <h1>Paragraph 1</h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam itaque quae magnam nisi sapiente!
+            </p>
+            <h1>Paragraph 2</h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam itaque quae magnam nisi sapiente!
+            </p>
+            <!-- Buttons to switch between dark and light modes -->
+            <button id="dark" onclick="enable_dark()">Dark Mode</button>
+            <button id="light" onclick="enable_light()">Light Mode</button>
+        </div>
+    </body>
+    <script>
+        function enable_dark(){
+            // Select all <p> and <h1> elements
+            var paragraphs = document.getElementsByTagName("p");
+            var headings = document.getElementsByTagName("h1");
+            
+            // Set the background color of the body to black
+            document.body.style.backgroundColor = "black";
+            
+            // Set text color of all <p> elements to white
+            for (var i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].style.color = "white";
+            }
+            
+            // Set text color of all <h1> elements to white
+            for (var i = 0; i < headings.length; i++) {
+                headings[i].style.color = "white";
+            }
+        }
+
+        function enable_light(){
+            // Select all <p> and <h1> elements
+            var paragraphs = document.getElementsByTagName("p");
+            var headings = document.getElementsByTagName("h1");
+            
+            // Set the background color of the body to white
+            document.body.style.backgroundColor = "white";
+            
+            // Set text color of all <p> elements to black
+            for (var i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].style.color = "black";
+            }
+            
+            // Set text color of all <h1> elements to black
+            for (var i = 0; i < headings.length; i++) {
+                headings[i].style.color = "black";
+            }
+        }
+    </script>
+</html>
