@@ -1,0 +1,18 @@
+body{
+    margin: auto;
+    padding: 0;
+    background-color: yellow;
+    text-align: center;
+    
+}
+.container{
+    background-color: aqua;
+    color: black;
+    border: 1px solid black;
+    margin-inline: auto;
+    margin-top: 100px;
+    display: block;
+    width: fit-content;
+    padding: 20px;
+    align-self: center;
+}

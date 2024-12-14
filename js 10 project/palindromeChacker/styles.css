@@ -1,0 +1,13 @@
+body{
+    background-color: aqua;
+}
+.container{
+    border: 1px solid black;
+    background-color: antiquewhite;
+    color: black;
+    text-align: center;
+    margin-inline: auto;
+    margin-top: 100px;
+    width: fit-content;
+    padding: 20px;
+}
