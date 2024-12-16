@@ -1,0 +1,27 @@
+body{
+    background-color: black;
+    color: white;
+}
+.container{
+    margin-inline: auto;
+    width: fit-content;
+    margin-top: 100px;
+    border: 1px solid white;
+    padding: 20px;    
+}
+.input-container{
+    display: block;
+    margin: 20px;
+}
+.h{
+    margin: 10px;
+}
+.w{
+    margin: 10px;
+}
+.btn{
+    margin: 10px;
+}
+.display{
+    margin: 10px;
+}
