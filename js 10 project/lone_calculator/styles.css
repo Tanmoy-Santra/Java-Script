@@ -1,0 +1,25 @@
+body{
+    background-color: black;
+    color: white;
+    justify-content: center;
+}
+
+.container{
+    margin-inline: auto;
+    margin-top: 50px;
+    width: fit-content;
+}
+.calculator{
+    border: 1px solid white;
+    padding: 20px;
+    border-radius: 20px;
+}
+.input-groups{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.btn{
+    margin: 10px;
+    width:204px;
+}
