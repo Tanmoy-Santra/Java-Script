@@ -1,0 +1,11 @@
+
+postman
+=======
+
+vidio link - https://www.youtube.com/watch?v=CLG0ha_a0q8&t=169s
+
+demo
+====
+
+link - https://github.com/vdespa/introduction-to-postman-course/blob/main/simple-books-api.md
+
