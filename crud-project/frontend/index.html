@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="inner-container">
+            <label for="title">Title</label>
+            <input type="text" name="" id="title" class="title-text">
+        </div>
+        <div class="inner-container">
+            <label for="description">Description</label>
+            <input type="text" name="" id="description" class="title-text">
+        </div>
+        <div class="inner-container">
+            <label for="completed">Completed (True/False)</label>
+            <input type="text" name="" id="completed" class="completed-text">
+        </div>
+        <button class="btn" id="submit">submit</button>
+        <div class="fetch-data-container" id="fetch-data">
+            <button class="btn" id="show-data">Show Data</button>
+            <div class="show-all-data" id="showAllData"></div>
+        </div>
+        <div class="fetch-data-container-id" id="fetch-data-id">
+            <button class="btn" id="showDataBtnById">Show Data (by id)</button>
+            <input type="text" placeholder="enter id" id="input-id">
+            <div class="show-all-data-id" id="showAllDataid"></div>
+        </div>
+        <div class="delete-data-container-id" id="delete-data-id">
+            <button class="btn" id="Delete">Delete Data (by id)</button>
+            <input type="text" placeholder="enter id" id="input-id-delete">           
+        </div>
+        <button class="btn" id="update-button">Update Data (by id)</button>
+       <div class="update" id="update"></div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

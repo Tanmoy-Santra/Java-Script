@@ -1,0 +1,27 @@
+body{
+    background-color: black;
+}
+.container{
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    margin-inline: auto;
+    justify-content: center;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+.inner-container{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;    
+}
+.btn{
+    margin: 10px;
+    width :200px;
+}
+.final{
+    background-color: rgb(93, 93, 93);
+    padding-left:5px;    
+}
