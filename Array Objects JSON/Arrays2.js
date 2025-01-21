@@ -52,3 +52,11 @@ let a2=678
 let a3=90
 
 console.log(Array.of(a1,a2,a3));
+
+//reduce
+const numbers = [1, 2, 3, 4, 5];
+
+const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+console.log(sum); // Output: 15
+
