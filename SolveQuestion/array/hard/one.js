@@ -74,6 +74,33 @@ console.log(res, ' units');
 // Output:
 // Smallest Missing: 2
 
+function smallestMissingPositive(arr) {
+    const n = arr.length;
+  
+    // Step 1: Place each number in its correct position if possible
+    for (let i = 0; i < n; i++) {
+      while (ar[i] > 0 && ar[i] <= n && ar[ar[i] - 1] !== ar[i]) {
+        // Swap arr[i] with arr[arr[i] - 1]
+        [ar[ar[i] - 1], ar[i]] = [arr[i], ar[ar[i] - 1]];
+      }
+    }
+  
+    // Step 2: Identify the first index that doesn't match its value
+    for (let i = 0; i < n; i++) {
+      if (ar[i] !== i + 1) {
+        return i + 1;
+      }
+    }
+  
+    // Step 3: If all indices match, return n + 1
+    return n + 1;
+  }
+  
+  // Example Usage
+  const ar = [3, 4, -1, 1];
+  console.log("Smallest Missing:", smallestMissingPositive(ar)); // Output: 2
+  
+
 // 12. Product of Array Except Self
 // Problem: Return an array such that each element is the product of all other elements without using division.
 
@@ -81,3 +108,53 @@ console.log(res, ' units');
 // arr = [1, 2, 3, 4]
 // Output:
 // [24, 12, 8, 6]
+
+
+let q=[1,2,3,4]
+console.log(q.reduce((a,c)=>(a*c)));
+
+let ans=1,a=[];
+
+// q.forEach((item)=>{
+//     a.push(q.reduce((a,c)=>(a*c),1)/item);
+// })
+// console.log(a);
+
+q.forEach((item)=>{
+    a.push(q.reduce((a,c)=>{
+        if(c!=item){
+            return a*c;
+        }
+        return a;
+    },1));
+})
+console.log(a);
+
+//remove duplicate without using any another aray and set
+
+let a62 = [1, 2, 2, 3, 4, 1, 5];
+
+a62.forEach((e, index) => {
+  // Check if this element exists in the remaining part of the array (after the current index)
+  if (a62.indexOf(e, index + 1) !== -1) {
+    a62.splice(a62.indexOf(e, index + 1), 1); // Remove the duplicate
+  }
+});
+
+console.log(a62); // [1, 2, 3, 4, 5]
+
+
+//using set and another array
+
+let a622 = [1, 2, 2, 3];
+let unique = a622.reduce((acc, e) => {
+  if (!acc.includes(e)) {
+    acc.push(e); // Add to accumulator if not already present
+  }
+  return acc;
+}, []);
+
+console.log(unique); // [1, 2, 3]
+
+
+//set=new Set(a4)
