@@ -21,27 +21,27 @@ console.log('missng number is',s-sum);
 // Example: Input: [1, 2, 3, 4, 5], Target: 5, Output: [(1, 4), (2, 3)].
 // Tip: Use a Map to store complements.
 
-let arr2=[1, 2, 3, 4, 5];
-const t=5;
-let f=0,r=arr2.length-1,res=[];
-let find=false;
-while(f<r){
-    pairSum=arr2[f]+arr2[r];
-    if(pairSum>t){
-        r--;
-    }else if(pairSum<t){
-        f++;
-    }else{
-        res.push(arr2[f]);
-        res.push(arr2[r]);
-        find=true;        
-    }
+// let arr2=[1, 2, 3, 4, 5];
+// const t=5;
+// let f=0,r=arr2.length-1,res=[];
+// let find=false;
+// while(f<r){
+//     pairSum=arr2[f]+arr2[r];
+//     if(pairSum>t){
+//         r--;
+//     }else if(pairSum<t){
+//         f++;
+//     }else{
+//         res.push(arr2[f]);
+//         res.push(arr2[r]);
+//         find=true;        
+//     }
 
     
-}
-if(find){
-    console.log(res);        
-}
+// }
+// if(find){
+//     console.log(res);        
+// }
    
 
 
@@ -50,11 +50,50 @@ if(find){
 
 // Example: Input: [1, 2, 3, 4, 5], k = 2, Output: [4, 5, 1, 2, 3].
 // Tip: Use slicing: arr.slice(-k).concat(arr.slice(0, -k)).
+
+console.log('rotate');
+
+let arr6=[1,2,3,4,5];
+let k=2;
+console.log(arr6.slice(-k).concat(arr6.slice(0,-k)));
+
+
 // Find the intersection of two arrays.
 
 // Example: Input: [1, 2, 3], [2, 3, 4], Output: [2, 3].
 // Tip: Use a Set for faster lookups.
+
+
+let a=[1,2,3];
+let b=[2,3,4];
+
+let set=new Set(a);
+let intersection=b.filter((item)=>{
+   return set.has(item);
+})
+
+console.log(intersection);
+
+
+
+
+
+
+
 // Find the first repeating element in an array.
 
 // Example: Input: [1, 2, 3, 2, 1], Output: 2.
 // Tip: Use a Set to track seen elements.
+
+let aa=[1,2,3,2,1]
+let setA=new Set();
+let res;
+for(let i of aa){
+    if(setA.has(i)){
+        res=i;
+        break;
+    }
+    setA.add(i);
+}
+
+console.log(res);
