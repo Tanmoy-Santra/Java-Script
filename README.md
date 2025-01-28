@@ -1,5 +1,7 @@
 # java Script complete
-# Notes[https://docs.google.com/document/d/1ZinUyWQXbCW7vhx-0Ox-IFwO7cQXKDnS-hhx7Kt_IeI/edit?usp=sharing] 
+
+# Notes - https://docs.google.com/document/d/1ZinUyWQXbCW7vhx-0Ox-IFwO7cQXKDnS-hhx7Kt_IeI/edit?usp=sharing
+
 ## Tpoics Covered
 Syntax and Basic Constructs: Variables, data types, operators, control structures (if-else, loops), functions, and objects.
 
