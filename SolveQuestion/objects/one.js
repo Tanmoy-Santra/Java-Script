@@ -79,53 +79,7 @@ const clonedObj = JSON.parse(JSON.stringify(obj));
 console.log(clonedObj);
 
 
-// 4. Group by Property
-// Problem:
-// Group an array of objects by a specific property.
-
-// const data = [
-//   { name: "Alice", role: "developer" },
-//   { name: "Bob", role: "designer" },
-//   { name: "Charlie", role: "developer" }
-// ];
-// Output:
-
-// // {
-// //   developer: [{ name: "Alice", role: "developer" }, { name: "Charlie", role: "developer" }],
-// //   designer: [{ name: "Bob", role: "designer" }]
-// // }
-
-
-
-
-// 5. Flatten a Nested Object
-// Problem:
-// Write a function that flattens a deeply nested object.
-
-// const obj = {
-//   a: 1,
-//   b: { c: 2, d: { e: 3 } }
-// };
-// Output:
-
-// // { "a": 1, "b.c": 2, "b.d.e": 3 }
-
-
-
-// 6. Find the Key with the Maximum Value
-// Problem:
-// Given an object, find the key with the highest value.
-// const scores = {
-//   Alice: 85,
-//   Bob: 92,
-//   Charlie: 88
-// };
-// Output:
-
-// // Highest Score: Bob
-
-
-// 7. Remove Duplicates Based on Key
+// 4. Remove Duplicates Based on Key
 // Problem:
 // Remove duplicate objects in an array based on a specific key.
  
@@ -154,7 +108,7 @@ const arr = [
   console.log(o);
   
 
-// 8. Transform Object Keys
+// 5. Transform Object Keys
 // Problem:
 // Write a function that takes an object and returns a new object where all keys are transformed to uppercase.
 // const obj = { firstName: "Alice", lastName: "Smith" };
@@ -172,7 +126,7 @@ console.log(newObj);  // Log the new object
 
 
 
-// 9. Merge Two Objects
+// 6. Merge Two Objects
 // Problem:
 // Write a function to merge two objects. If a key exists in both, combine their values into an array.
 
@@ -191,16 +145,26 @@ console.log(obj111);
 
 
 
+//7 make a list of keys and values
 
-// 10. Sort Object by Values
-// Problem:
-// Sort the keys of an object based on their values.
+const anime={
+  1:'naruto',
+  2:'madara' ,
+  3:'obito ',
+  4:'hitachi',
+  5:'sasuke' ,   
+}
+let l1=[],l2=[];
+console.log(anime);
 
-// const obj = {
-//   a: 3,
-//   b: 1,
-//   c: 2
-// };
-// Output:
- 
-// // { b: 1, c: 2, a: 3 }
+const entire=Object.entries(anime)
+console.log(entire);
+
+for(const [key,value] of entire){
+  console.log(key,":",value);
+  l1.push(key)  ;
+  l2.push(value);
+}
+console.log(l1);
+console.log(l2);
+
