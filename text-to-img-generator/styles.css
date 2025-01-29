@@ -1,0 +1,98 @@
+/* General body styles */
+body {
+    background-color: #f3f4f6; /* Light gray background */
+    font-family: 'Arial', sans-serif; /* Simple font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+}
+
+/* Main container styles */
+.container {
+    background-color: #ffffff; /* White background for the container */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 100%;
+    max-width: 500px; /* Maximum width for responsiveness */
+    text-align: center;
+}
+
+/* Heading styles */
+h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Subheading styles */
+p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Search box styles */
+.search-box {
+    margin-bottom: 20px;    
+    padding: 12px;
+}
+
+/* Label for input field */
+.search-box label {
+    font-size: 1rem;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+     padding: 12px;
+}
+
+/* Input field styles */
+#search-content {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 16px;
+    outline: none;
+}
+
+/* Input field focus effect */
+#search-content:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Button styles */
+#search-btn {
+    background-color: #3498db; /* Blue background */
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+#search-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Results container */
+#results {
+    margin: 20px;
+    text-align: center;
+}
+
+/* Style for images in results */
+#results img {
+    width: 100%;
+    max-width: 60%;
+    border-radius: 8px;
+}
