@@ -1,0 +1,37 @@
+<!-- Counter App
+
+Create a counter with a + button to increase the value and a - button to decrease it. Display the updated value in real time. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+</head>
+<body>
+    <div id="output">0</div>
+    <button id="plus">+</button>    
+    <button id="minus">-</button>    
+</body>
+<script>
+    const output=document.getElementById('output');
+    let count=parseInt(output.innerText);  
+    
+    const plus=document.getElementById('plus');
+    const minus=document.getElementById('minus');
+
+    plus.addEventListener('click',()=>{
+        count=count+1;
+        output.innerText=count;
+    })
+    minus.addEventListener('click',()=>{
+        if(count>0){
+            count=count-1
+        }else{
+            count=0;
+        }
+        output.innerText=count;
+    })
+</script>
+</html>

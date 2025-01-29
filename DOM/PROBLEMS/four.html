@@ -1,0 +1,21 @@
+<!-- Key Press Detector
+
+Display the key pressed by the user in an h1 tag whenever they press any key on the keyboard. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Press Detector</title>
+</head>
+<body>
+    <h1 id="out">abc</h1>
+</body>
+<script>
+    const output=document.getElementById('out');
+    document.addEventListener('keypress',(e)=>{
+        output.innerText=e.key;
+    })
+</script>
+</html>

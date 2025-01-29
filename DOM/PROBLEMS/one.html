@@ -1,0 +1,25 @@
+<!-- Change Background Color
+
+Create a button that, when clicked, changes the background color of the page to a random color.
+Show/Hide Password
+
+Create an input field for a password and a checkbox. When the checkbox is checked, the password should be visible; otherwise, it should be hidden. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color</title>
+</head>
+<body>
+    <button id="btn">change bg color</button>
+</body>
+<script>
+    const btn=document.getElementById('btn');
+    btn.addEventListener('click',()=>{
+        document.body.style.background='black';
+    })
+</script>
+</html>
