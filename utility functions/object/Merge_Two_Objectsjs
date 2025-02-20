@@ -1,0 +1,19 @@
+function merge_obj(obj1,obj2){
+    return {...obj1,...obj2};
+}
+
+const obj1={
+    1:'A1',
+    2:'B2',
+    3:'C3',
+    4:'D4'
+}
+const obj2={
+    11:'A',
+    21:'B',
+    33:'C',
+    44:'D',
+    55:'E'
+}
+
+console.log(merge_obj(obj1,obj2));
